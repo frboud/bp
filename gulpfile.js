@@ -14,9 +14,8 @@ const onError = (err) => {
   console.log(err);
 };
 
-
 // Default task
-gulp.task("m", ["css", "js"], () => {
+gulp.task("default", ["css", "js"], () => {
   gulp.watch([pkg.paths.src.scss + '**/*.scss'], ["css"]);
   gulp.watch([pkg.paths.src.js + "**/*.js"], ["js"]);
   $.fancyLog('-- gulp ready --');
